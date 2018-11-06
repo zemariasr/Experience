@@ -10,11 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var tfName: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
+   
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueHero" {
+        tfName.resignFirstResponder()
+        let vc = segue.destination as! HeroesTableViewController
+        vc.name = tfName.text
+    }
+    }
+    
+    
 }
 

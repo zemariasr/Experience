@@ -32,7 +32,7 @@
                                     <color key="titleColor" name="RedMarvel"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1pB-BJ-t34" kind="show" id="5KD-9i-1Gr"/>
+                                    <segue destination="1pB-BJ-t34" kind="show" identifier="segueQuiz" id="5KD-9i-1Gr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você conhece os personagens da Marvel? Faça o nosso QUIZ!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKV-vd-Og3">
@@ -68,7 +68,7 @@
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
                                         <connections>
-                                            <segue destination="3Ok-Au-Vg8" kind="show" id="N2R-hZ-cW1"/>
+                                            <segue destination="3Ok-Au-Vg8" kind="show" identifier="segueHero" id="N2R-hZ-cW1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,6 +81,9 @@
                     <navigationItem key="navigationItem" title="Mundo Marvel" id="O8n-b6-ezQ">
                         <barButtonItem key="backBarButtonItem" title="Mundo Marvel" id="DC1-uI-7Li"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tfName" destination="VaX-h1-Esf" id="0Pc-ug-Za4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +142,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="BlackMarvel"/>
                                 <connections>
+                                    <outlet property="ivThumb" destination="f4w-cS-kIY" id="iRA-sE-1R2"/>
+                                    <outlet property="lbDescription" destination="Nsb-7V-fII" id="iPe-6d-C3p"/>
+                                    <outlet property="lbName" destination="ORb-kD-VOV" id="SPk-3d-ZQm"/>
                                     <segue destination="msK-IZ-YLv" kind="show" id="g5T-og-KyO"/>
                                 </connections>
                             </tableViewCell>
@@ -186,6 +192,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Qj-8m-frb"/>
                     </view>
+                    <connections>
+                        <outlet property="loading" destination="rPq-ch-43Y" id="H5C-Dj-NdH"/>
+                        <outlet property="webView" destination="Bh3-GQ-AwM" id="2sD-sl-uFy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zt-BI-c1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
