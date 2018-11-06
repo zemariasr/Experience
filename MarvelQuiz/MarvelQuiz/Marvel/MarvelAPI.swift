@@ -14,7 +14,7 @@ class MarvelAPI {
     static private let basePath = "https://gateway.marvel.com/v1/public/characters?"
     static private let privateKey = "b60bc87d5641dae8eab0063d5d229761666e5067"
     static private let publicKey = "9533b37a303cbcb29bec9e4b444b30be"
-    static private let limit = 50
+    static private let limit = 20
     
     
     class func loadHeros(name: String?, page: Int = 0, onComplete: @escaping (MarvelInfo?) -> Void) {

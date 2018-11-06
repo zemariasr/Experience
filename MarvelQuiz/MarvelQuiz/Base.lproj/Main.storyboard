@@ -112,13 +112,13 @@
                                                 <constraint firstAttribute="height" constant="80" id="wwe-hi-NrP"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-kD-VOV">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-kD-VOV">
                                             <rect key="frame" x="104" y="11" width="255" height="24"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <color key="textColor" name="YellowMarvel"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsb-7V-fII">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsb-7V-fII">
                                             <rect key="frame" x="104" y="43" width="255" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" name="YellowMarvel"/>
@@ -129,7 +129,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="ORb-kD-VOV" secondAttribute="trailing" id="4Pl-hX-iQ0"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="f4w-cS-kIY" secondAttribute="bottom" constant="18" id="6dD-gy-bMp"/>
                                         <constraint firstItem="f4w-cS-kIY" firstAttribute="top" secondItem="3Tg-sw-lTR" secondAttribute="top" constant="11" id="7uc-hc-4AP"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Nsb-7V-fII" secondAttribute="bottom" constant="18" id="Ca5-Pp-tNA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Nsb-7V-fII" secondAttribute="bottom" priority="250" constant="18" id="Ca5-Pp-tNA"/>
                                         <constraint firstItem="ORb-kD-VOV" firstAttribute="leading" secondItem="f4w-cS-kIY" secondAttribute="trailing" constant="8" id="DYl-Wj-w9n"/>
                                         <constraint firstItem="Nsb-7V-fII" firstAttribute="trailing" secondItem="3Tg-sw-lTR" secondAttribute="trailingMargin" id="Emi-hK-heQ"/>
                                         <constraint firstItem="Nsb-7V-fII" firstAttribute="top" secondItem="ORb-kD-VOV" secondAttribute="bottom" constant="8" id="MhV-Ws-lR1"/>

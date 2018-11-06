@@ -29,7 +29,7 @@ struct Hero: Codable {
     let description: String
     let thumbnail: Thumbnail
     let urls: [HeroURL]
- //   let comics: [ComicList]
+
 }
 
 struct Thumbnail: Codable {
@@ -53,12 +53,3 @@ struct HeroURL: Codable {
     
 }
 
-//struct ComicList: Codable {
-//    let available: Int
-//    let returned: Int
-//    let items: [ComicSummary]
-//}
-
-//struct ComicSummary: Codable {
-//    let name: String
-//}
