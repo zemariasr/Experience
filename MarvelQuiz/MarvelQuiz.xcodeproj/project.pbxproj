@@ -20,9 +20,12 @@
 		29788D712190CA2A00FDC98B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29788D702190CA2A00FDC98B /* ResultViewController.swift */; };
 		29788D752190D56400FDC98B /* MarvelClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29788D742190D56400FDC98B /* MarvelClasses.swift */; };
 		29788D772190D57900FDC98B /* MarvelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29788D762190D57900FDC98B /* MarvelAPI.swift */; };
+		C6190C6004E09AD01CEC6340 /* Pods_MarvelQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88866D985F7C6363951A47F5 /* Pods_MarvelQuiz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20247A5DA71D780493F9F277 /* Pods-MarvelQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		23E12F7420B9E0F965166749 /* Pods-MarvelQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		29788D512190AEF700FDC98B /* MarvelQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29788D542190AEF800FDC98B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29788D562190AEF800FDC98B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		29788D702190CA2A00FDC98B /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		29788D742190D56400FDC98B /* MarvelClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelClasses.swift; sourceTree = "<group>"; };
 		29788D762190D57900FDC98B /* MarvelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
+		88866D985F7C6363951A47F5 /* Pods_MarvelQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +49,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6190C6004E09AD01CEC6340 /* Pods_MarvelQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233B28FAB793D1C2936BD946 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23E12F7420B9E0F965166749 /* Pods-MarvelQuiz.debug.xcconfig */,
+				20247A5DA71D780493F9F277 /* Pods-MarvelQuiz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		29788D482190AEF700FDC98B = {
 			isa = PBXGroup;
 			children = (
 				29788D532190AEF700FDC98B /* MarvelQuiz */,
 				29788D522190AEF700FDC98B /* Products */,
+				233B28FAB793D1C2936BD946 /* Pods */,
+				C05236C4CF77191554CD8AC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +120,14 @@
 			path = Marvel;
 			sourceTree = "<group>";
 		};
+		C05236C4CF77191554CD8AC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88866D985F7C6363951A47F5 /* Pods_MarvelQuiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29788D632190AEFA00FDC98B /* Build configuration list for PBXNativeTarget "MarvelQuiz" */;
 			buildPhases = (
+				FC250BCE5823F78BEBB6AA97 /* [CP] Check Pods Manifest.lock */,
 				29788D4D2190AEF700FDC98B /* Sources */,
 				29788D4E2190AEF700FDC98B /* Frameworks */,
 				29788D4F2190AEF700FDC98B /* Resources */,
+				A7EC5AF19FFB0AF8D79249FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +195,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7EC5AF19FFB0AF8D79249FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHash.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarvelQuiz/Pods-MarvelQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC250BCE5823F78BEBB6AA97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarvelQuiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29788D4D2190AEF700FDC98B /* Sources */ = {
@@ -328,6 +405,7 @@
 		};
 		29788D642190AEFA00FDC98B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23E12F7420B9E0F965166749 /* Pods-MarvelQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -347,6 +425,7 @@
 		};
 		29788D652190AEFA00FDC98B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20247A5DA71D780493F9F277 /* Pods-MarvelQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!-- -->
+        <!--Mundo Marvel-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarvelQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title=" " id="O8n-b6-ezQ"/>
+                    <navigationItem key="navigationItem" title="Mundo Marvel" id="O8n-b6-ezQ">
+                        <barButtonItem key="backBarButtonItem" title="Mundo Marvel" id="DC1-uI-7Li"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,20 +103,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-cS-kIY">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <rect key="frame" x="16" y="11" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="TeZ-sT-Ig0"/>
                                                 <constraint firstAttribute="height" constant="80" id="wwe-hi-NrP"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-kD-VOV">
-                                            <rect key="frame" x="88" y="11" width="271" height="24"/>
+                                            <rect key="frame" x="104" y="11" width="255" height="24"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <color key="textColor" name="YellowMarvel"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsb-7V-fII">
-                                            <rect key="frame" x="88" y="43" width="271" height="18"/>
+                                            <rect key="frame" x="104" y="43" width="255" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" name="YellowMarvel"/>
                                             <nil key="highlightedColor"/>
@@ -123,12 +125,12 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="ORb-kD-VOV" secondAttribute="trailing" id="4Pl-hX-iQ0"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="f4w-cS-kIY" secondAttribute="bottom" constant="18" id="6dD-gy-bMp"/>
-                                        <constraint firstItem="f4w-cS-kIY" firstAttribute="top" secondItem="3Tg-sw-lTR" secondAttribute="top" id="7uc-hc-4AP"/>
+                                        <constraint firstItem="f4w-cS-kIY" firstAttribute="top" secondItem="3Tg-sw-lTR" secondAttribute="top" constant="11" id="7uc-hc-4AP"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Nsb-7V-fII" secondAttribute="bottom" constant="18" id="Ca5-Pp-tNA"/>
                                         <constraint firstItem="ORb-kD-VOV" firstAttribute="leading" secondItem="f4w-cS-kIY" secondAttribute="trailing" constant="8" id="DYl-Wj-w9n"/>
                                         <constraint firstItem="Nsb-7V-fII" firstAttribute="trailing" secondItem="3Tg-sw-lTR" secondAttribute="trailingMargin" id="Emi-hK-heQ"/>
                                         <constraint firstItem="Nsb-7V-fII" firstAttribute="top" secondItem="ORb-kD-VOV" secondAttribute="bottom" constant="8" id="MhV-Ws-lR1"/>
-                                        <constraint firstItem="f4w-cS-kIY" firstAttribute="leading" secondItem="3Tg-sw-lTR" secondAttribute="leading" id="PsG-eH-kbr"/>
+                                        <constraint firstItem="f4w-cS-kIY" firstAttribute="leading" secondItem="3Tg-sw-lTR" secondAttribute="leading" constant="16" id="PsG-eH-kbr"/>
                                         <constraint firstItem="Nsb-7V-fII" firstAttribute="leading" secondItem="f4w-cS-kIY" secondAttribute="trailing" constant="8" id="WO1-bv-aN5"/>
                                         <constraint firstItem="ORb-kD-VOV" firstAttribute="leading" secondItem="f4w-cS-kIY" secondAttribute="trailing" constant="8" id="upk-ei-hmk"/>
                                         <constraint firstItem="Nsb-7V-fII" firstAttribute="top" secondItem="ORb-kD-VOV" secondAttribute="bottom" constant="8" id="vqd-0R-MZN"/>
@@ -199,7 +201,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="BlackMarvel"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" name="RedMarvel"/>
+                            <color key="textColor" red="0.88870223449999997" green="0.021996908610000001" blue="0.039179709809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -211,7 +213,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="792.95352323838085"/>
         </scene>
-        <!--View Controller2-->
+        <!--Quiz Marvel-->
         <scene sceneID="ozP-Bv-o4L">
             <objects>
                 <viewController id="1pB-BJ-t34" customClass="ViewController2" customModule="MarvelQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -223,17 +225,6 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchMarvel" translatesAutoresizingMaskIntoConstraints="NO" id="0SO-Wu-a7b">
-                                <rect key="frame" x="35" y="168" width="305" height="313"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QUIZ MARVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSZ-4G-b5F">
-                                <rect key="frame" x="0.0" y="84" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="51"/>
-                                <color key="textColor" name="YellowMarvel"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPI-EP-6LY">
                                 <rect key="frame" x="35" y="570" width="305" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -245,11 +236,15 @@
                                     <segue destination="0PQ-TF-aBc" kind="show" id="P0H-9q-fOm"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchMarvel" translatesAutoresizingMaskIntoConstraints="NO" id="0SO-Wu-a7b">
+                                <rect key="frame" x="35" y="209" width="305" height="313"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Hzv-a9-nr9"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3ga-0f-FsB"/>
+                    <navigationItem key="navigationItem" title="Quiz Marvel" id="3ga-0f-FsB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upL-ix-ZSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,9 +286,6 @@
         <image name="backGround" width="1920" height="840"/>
         <namedColor name="BlackMarvel">
             <color red="0.2800000011920929" green="0.2800000011920929" blue="0.2800000011920929" alpha="0.89999997615814209" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="RedMarvel">
-            <color red="0.72699999809265137" green="0.081000000238418579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="RedMarvel">
             <color red="0.72699999809265137" green="0.081000000238418579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
