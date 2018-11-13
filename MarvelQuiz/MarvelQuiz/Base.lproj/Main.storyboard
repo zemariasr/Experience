@@ -209,6 +209,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="RaK-pd-WXv">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="BlackMarvel"/>
                         <color key="tintColor" name="BlackMarvel"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.88870223449999997" green="0.021996908610000001" blue="0.039179709809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -260,7 +261,7 @@
             </objects>
             <point key="canvasLocation" x="892" y="1509.8950524737631"/>
         </scene>
-        <!--Quiz View Controller-->
+        <!--Perguntas-->
         <scene sceneID="Xik-kY-KmM">
             <objects>
                 <viewController id="0PQ-TF-aBc" customClass="QuizViewController" customModule="MarvelQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -298,6 +299,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectAnswer:" destination="0PQ-TF-aBc" eventType="touchUpInside" id="UTY-Hb-70y"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjf-ca-k4H">
                                         <rect key="frame" x="0.0" y="46" width="375" height="44"/>
@@ -308,6 +312,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectAnswer:" destination="0PQ-TF-aBc" eventType="touchUpInside" id="aWp-aW-1iX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZq-EN-MkM">
                                         <rect key="frame" x="0.0" y="91" width="375" height="44"/>
@@ -318,6 +325,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectAnswer:" destination="0PQ-TF-aBc" eventType="touchUpInside" id="n9H-JJ-o2R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAb-7a-tec">
                                         <rect key="frame" x="0.0" y="136" width="375" height="44"/>
@@ -328,6 +338,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectAnswer:" destination="0PQ-TF-aBc" eventType="touchUpInside" id="K92-Ke-blz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="BlackMarvel"/>
@@ -343,7 +356,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ShO-2Z-vXo"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Perguntas" id="TiH-qM-Y7g"/>
                     <connections>
+                        <outlet property="lbQuestion" destination="NcX-lh-6IE" id="DJ6-Ak-z9D"/>
+                        <outlet property="viTimer" destination="Iqi-no-F55" id="Uwe-ga-GNj"/>
+                        <outletCollection property="btAnswers" destination="8AU-qV-xPl" collectionClass="NSMutableArray" id="xkA-2W-yHi"/>
+                        <outletCollection property="btAnswers" destination="vjf-ca-k4H" collectionClass="NSMutableArray" id="BUj-Ye-Wmw"/>
+                        <outletCollection property="btAnswers" destination="rZq-EN-MkM" collectionClass="NSMutableArray" id="6eG-mf-vYg"/>
+                        <outletCollection property="btAnswers" destination="PAb-7a-tec" collectionClass="NSMutableArray" id="OQX-9B-vak"/>
                         <segue destination="prf-iE-A3V" kind="show" id="5gh-0Y-bsQ"/>
                     </connections>
                 </viewController>
@@ -351,7 +371,7 @@
             </objects>
             <point key="canvasLocation" x="1589.5999999999999" y="1509.8950524737631"/>
         </scene>
-        <!--Result View Controller-->
+        <!--Resultado-->
         <scene sceneID="KyD-0p-ddX">
             <objects>
                 <viewController id="prf-iE-A3V" customClass="ResultViewController" customModule="MarvelQuiz" customModuleProvider="target" sceneMemberID="viewController">
@@ -363,29 +383,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mi2-Lc-Zb3">
-                                <rect key="frame" x="0.0" y="125" width="375" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perguntas respondidas: 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrU-t4-k7j">
-                                <rect key="frame" x="25" y="192" width="329" height="24"/>
+                                <rect key="frame" x="25" y="144" width="329" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="BlackMarvel"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perguntas corretas: 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZY-om-AZP">
-                                <rect key="frame" x="25" y="224" width="329" height="24"/>
+                                <rect key="frame" x="25" y="176" width="329" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="BlueMarvel"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perguntas erradas: 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czw-Nn-Fxa">
-                                <rect key="frame" x="25" y="256" width="329" height="24"/>
+                                <rect key="frame" x="25" y="208" width="329" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="RedMarvel"/>
@@ -397,10 +410,29 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b25-i1-htl">
+                                <rect key="frame" x="30" y="600" width="315" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="BlackMarvel"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <state key="normal" title="Reiniciar">
+                                    <color key="titleColor" name="YellowMarvel"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="prf-iE-A3V" eventType="touchUpInside" id="0LK-g8-AY9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xgB-PK-L9x"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Resultado" id="9gk-2I-7Ti"/>
+                    <connections>
+                        <outlet property="lbAnswered" destination="DrU-t4-k7j" id="66X-Eg-KLd"/>
+                        <outlet property="lbCorrect" destination="IZY-om-AZP" id="G26-FX-jat"/>
+                        <outlet property="lbScore" destination="iYR-yH-DJ9" id="BMG-tA-ry6"/>
+                        <outlet property="lbWrong" destination="czw-Nn-Fxa" id="OyN-ej-0Pl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHw-Ro-EH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
