@@ -16,7 +16,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var lbQuestion: UILabel!
     @IBOutlet var btAnswers: [UIButton]!
     
-    
+    let quizManager = QuizManager()
     
     
     
@@ -27,19 +27,49 @@ class QuizViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viTimer.frame.size.width = view.frame.size.width
+        UIView.animate(withDuration: 60.0, delay: 0, options: .curveLinear, animations: {
+            self.viTimer.frame.size.width = 0
+        }) { (success) in
+            self.showResults()
+        }
+        
+        getNewQuiz()
+        
     }
-    */
 
+    func getNewQuiz() {
+        quizManager.refreshQuiz()
+        lbQuestion.text = quizManager.question
+        for i in 0..<quizManager.options.count{
+            let option = quizManager.options[i]
+            let button = btAnswers[i]
+            button.setTitle(option, for: .normal)
+        }
+    }
     
+    
+    func showResults() {
+        performSegue(withIdentifier: "resultSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultViewcontroller = segue.destination as! ResultViewController
+        resultViewcontroller.totalAnswers = quizManager.totalAnswers
+        resultViewcontroller.totalCorrectAnswers = quizManager.totalCorrectAnswers
+        
+        
+    }
     
     @IBAction func selectAnswer(_ sender: UIButton) {
+        
+        let index = btAnswers.index(of: sender)!
+        quizManager.validateAnswer(index: index)
+        getNewQuiz()
+        
     }
     
     

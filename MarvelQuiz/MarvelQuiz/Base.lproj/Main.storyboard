@@ -296,7 +296,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Option 1">
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
                                         <connections>
@@ -309,7 +309,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Option 2">
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
                                         <connections>
@@ -322,7 +322,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Option 3">
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
                                         <connections>
@@ -335,7 +335,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Option 4">
                                             <color key="titleColor" name="RedMarvel"/>
                                         </state>
                                         <connections>
@@ -364,7 +364,7 @@
                         <outletCollection property="btAnswers" destination="vjf-ca-k4H" collectionClass="NSMutableArray" id="BUj-Ye-Wmw"/>
                         <outletCollection property="btAnswers" destination="rZq-EN-MkM" collectionClass="NSMutableArray" id="6eG-mf-vYg"/>
                         <outletCollection property="btAnswers" destination="PAb-7a-tec" collectionClass="NSMutableArray" id="OQX-9B-vak"/>
-                        <segue destination="prf-iE-A3V" kind="show" id="5gh-0Y-bsQ"/>
+                        <segue destination="prf-iE-A3V" kind="show" identifier="resultSegue" id="5gh-0Y-bsQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGa-Yh-FOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
